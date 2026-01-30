@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Story 💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="love-bg">
+    <div class="hearts">
+    <span>💗</span>
+    <span>💖</span>
+    <span>💞</span>
+    <span>💕</span>
+    <span>❤️</span>
+    <span>💘</span>
+</div>
+
+    <div class="container comic-container">
+        <p class="memory-line">
+            Okasari gurthutechhukoo…<br>
+            chala bagundi kadaaa 🥹💞
+        </p>
+
+        <div class="comic-box">
+            <button class="prev-btn" onclick="prevComic()">&#10094;</button>
+
+            <img src="comic1.jpg" id="comicImage" alt="Love Story Comic">
+
+            <button class="next-btn" onclick="nextComic()">&#10095;</button>
+        </div>
+
+        <a href="page6.html" class="btn calm-btn" id="calmBtn">
+            Emotional avvaku pada 🫶
+        </a>
+    </div>
+
+    <script>
+        const comics = ["comic1.jpg", "comic2.jpg", "comic3.jpg"];
+        let index = 0;
+        const calmBtn = document.getElementById("calmBtn");
+
+        function updateComic() {
+            document.getElementById("comicImage").src = comics[index];
+            document.querySelector(".prev-btn").style.display = index === 0 ? "none" : "block";
+
+            // Show button ONLY on last comic
+            calmBtn.style.display = index === comics.length - 1 ? "inline-block" : "none";
+        }
+
+        function nextComic() {
+            if (index < comics.length - 1) {
+                index++;
+                updateComic();
+            }
+        }
+
+        function prevComic() {
+            if (index > 0) {
+                index--;
+                updateComic();
+            }
+        }
+
+        updateComic();
+    </script>
+
+</body>
+</html>
