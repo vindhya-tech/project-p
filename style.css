@@ -37,6 +37,7 @@ h1 {
     color: #fff;
     font-size: 1.1rem;
     border-radius: 50px;
+    border-color: white;
     transition: all 0.3s ease;
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
@@ -147,8 +148,13 @@ h1 {
 }
 /* Final page background */
 .love-bg {
-    height: 100vh;
-    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #9c3c49,   /* deep romantic red */
+        #de5f7b,   /* rose red */
+        #72303c    /* soft love red */
+    );
     overflow: hidden;
     position: relative;
 }
